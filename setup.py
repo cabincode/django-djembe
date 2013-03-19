@@ -21,7 +21,6 @@ setup(
     ],
     description=djembe.__doc__,
     long_description=long_description,
-    download_url='http://github.com/cabincode/django-djembe/downloads',
     install_requires=[
         'Django>=1.4',
         'M2Crypto',
