@@ -22,9 +22,9 @@ setup(
     description=djembe.__doc__,
     long_description=long_description,
     install_requires=[
-        'Django>=1.4',
+        'Django>=1.6',
         'M2Crypto',
-        'South'
+        'South',
     ],
     name='django-djembe',
     packages=[
@@ -35,11 +35,11 @@ setup(
     package_data={
         'djembe': [
             'README.rst',
-            'LICENSE.txt',
+            'COPYING.txt',
         ],
     },
     tests_require=[
-        'Django>=1.4',
+        'Django>=1.6',
         'M2Crypto',
         'South',
         'coverage',

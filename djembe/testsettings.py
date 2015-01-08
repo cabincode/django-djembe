@@ -25,16 +25,7 @@ MEDIA_URL = ''
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 SECRET_KEY = 'sa)2m1h$n+g-5#8&amp;x!6dk_0yio_sjc4o7^+t(jp5)h_(m69esw'
-INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'djembe'
-)
+INSTALLED_APPS = ('djembe',)
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

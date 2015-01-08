@@ -25,7 +25,18 @@ sender will also be signed.
 License
 -------
 
-It's in the public domain.
+You can copy, modify, distribute and perform the work, even for
+commercial purposes, all without asking permission.
+
+To the extent possible under law, the author(s) have dedicated all
+copyright and related and neighboring rights to this software to the
+public domain worldwide. This software is distributed without any
+warranty.
+
+See the file COPYING for the full text of the CC0 Public Domain
+Dedication, also available at:
+
+    http://creativecommons.org/publicdomain/zero/1.0/
 
 Installation
 ------------

@@ -1,36 +1,27 @@
 # -*- coding: utf-8 -*-
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
-from django.db import models
+from __future__ import unicode_literals
+
+from django.db import models, migrations
 
 
-class Migration(SchemaMigration):
+class Migration(migrations.Migration):
 
-    def forwards(self, orm):
-        # Adding model 'Identity'
-        db.create_table('djembe_identity', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('address', self.gf('django.db.models.fields.EmailField')(max_length=256, blank=True)),
-            ('certificate', self.gf('django.db.models.fields.TextField')()),
-            ('key', self.gf('django.db.models.fields.TextField')(blank=True)),
-        ))
-        db.send_create_signal('djembe', ['Identity'])
+    dependencies = [
+    ]
 
-
-    def backwards(self, orm):
-        # Deleting model 'Identity'
-        db.delete_table('djembe_identity')
-
-
-    models = {
-        'djembe.identity': {
-            'Meta': {'ordering': "['address']", 'object_name': 'Identity'},
-            'address': ('django.db.models.fields.EmailField', [], {'max_length': '256', 'blank': 'True'}),
-            'certificate': ('django.db.models.fields.TextField', [], {}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'key': ('django.db.models.fields.TextField', [], {'blank': 'True'})
-        }
-    }
-
-    complete_apps = ['djembe']
+    operations = [
+        migrations.CreateModel(
+            name='Identity',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('certificate', models.TextField(help_text='A PEM-encoded X.509 certificate.')),
+                ('address', models.EmailField(help_text='If left blank, it will be extracted from the X.509 certificate.', max_length=256, blank=True)),
+                ('key', models.TextField(help_text='If mail <em>from</em> this identity should be signed, put a PEM-encoded private key here. Make sure it does not require a passphrase.', blank=True)),
+            ],
+            options={
+                'ordering': ['address'],
+                'verbose_name_plural': 'Identities',
+            },
+            bases=(models.Model,),
+        ),
+    ]

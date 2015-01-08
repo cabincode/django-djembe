@@ -11,4 +11,4 @@ class TestSuiteRunner(CoverageRunner):
 
     def setup_test_environment(self, **kwargs):
         super(TestSuiteRunner, self).setup_test_environment(**kwargs)
-        settings.EMAIL_BACKEND = mail.original_email_backend
+        settings.EMAIL_BACKEND = mail._original_email_backend
